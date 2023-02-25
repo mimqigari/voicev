@@ -1,0 +1,87 @@
+<%= form_with(model: rep) do |form| %>
+  <% if rep.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(rep.errors.count, "error") %> prohibited this rep from being saved:</h2>
+
+      <ul>
+        <% rep.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :ward, style: "display: block" %>
+    <%= form.text_field :ward %>
+  </div>
+
+  <div>
+    <%= form.label :punit, style: "display: block" %>
+    <%= form.text_field :punit %>
+  </div>
+
+  <div>
+    <%= form.label :totalreg, style: "display: block" %>
+    <%= form.number_field :totalreg %>
+  </div>
+
+  <div>
+    <%= form.label :validvote, style: "display: block" %>
+    <%= form.number_field :validvote %>
+  </div>
+
+  <div>
+    <%= form.label :invalidvote, style: "display: block" %>
+    <%= form.number_field :invalidvote %>
+  </div>
+
+  <div>
+    <%= form.label :pdp, style: "display: block" %>
+    <%= form.number_field :pdp %>
+  </div>
+
+  <div>
+    <%= form.label :apc, style: "display: block" %>
+    <%= form.number_field :apc %>
+  </div>
+
+  <div>
+    <%= form.label :nnpp, style: "display: block" %>
+    <%= form.number_field :nnpp %>
+  </div>
+
+  <div>
+    <%= form.label :prp, style: "display: block" %>
+    <%= form.number_field :prp %>
+  </div>
+
+  <div>
+    <%= form.label :lp, style: "display: block" %>
+    <%= form.number_field :lp %>
+  </div>
+
+  <div>
+    <%= form.label :zlp, style: "display: block" %>
+    <%= form.number_field :zlp %>
+  </div>
+
+  <div>
+    <%= form.label :others, style: "display: block" %>
+    <%= form.number_field :others %>
+  </div>
+
+  <div>
+    <%= form.label :pic, style: "display: block" %>
+    <%= form.text_field :pic %>
+  </div>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
